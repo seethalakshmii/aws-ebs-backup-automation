@@ -1,33 +1,36 @@
-<u>PROJECT: AUTOMATED EBS SNAPSHOT SCHEDULING</u>
+<u>PROJECT: AUTOMATED EBS BACKUP</u>
 
-<u>OVERVIEW</u>
-This project uses AWS Lambda and Python (Boto3) to automate EBS backups. It identifies specific EC2 instances via tags and creates point-in-time snapshots for disaster recovery.
+<u>GOAL</u>
+Automate EBS snapshots using AWS Lambda and Python (Boto3) to ensure data recovery via resource tagging.
 
 <u>TECH STACK</u>
-Cloud: Amazon Web Services (AWS)
-Compute: Lambda (Serverless)
-Language: Python 3.12 (Boto3)
+
+Cloud: AWS (EC2, Lambda, CloudWatch)
+
+Runtime: Python 3.12
+
 Security: IAM Roles (Keyless)
 
-<u>CORE FEATURES</u>
+<u>KEY CAPABILITIES</u>
 
-Tag-Based: Only targets instances with the "Backup: True" tag.
+Tag-Driven: Backs up only instances tagged Backup: True.
 
-Secure: Uses IAM Roles instead of manual access keys.
+Automated: Eliminates manual snapshots with event-driven logic.
 
-Automated: Creates timestamped snapshots without manual intervention.
+Secure: Operates via least-privilege IAM permissions.
 
-<u>IMPLEMENTATION STEPS</u>
+<u>WORKFLOW</u>
 
-Resource Setup: Launched EC2 instance i-00850dc6016df70cf with backup tags.
+Provision: Launched Instance i-00850dc6016df70cf with required tags.
 
-IAM Security: Configured a policy for EC2 snapshot and CloudWatch permissions.
+Authorize: Created IAM Policy for EC2 Snapshot and CloudWatch access.
 
-Automation: Deployed Python logic to Lambda to scan and backup volumes.
+Execute: Deployed Python script to Lambda to trigger backups.
 
-Verification: Confirmed snapshot creation via CloudWatch and EC2 Console.
+Verify: Confirmed success via CloudWatch logs and EC2 Console.
 
-<u>FINAL RESULTS</u>
-Target Instance: i-00850dc6016df70cf
-Status: Verified Success
-Documentation: Full step-by-step proof included in the attached report.
+<u>PROJECT STATUS</u>
+
+Instance ID: i-00850dc6016df70cf
+
+Result: SUCCESS (Verified)
