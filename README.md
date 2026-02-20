@@ -1,6 +1,5 @@
 <u>PROJECT: AUTOMATED EBS BACKUP</u>
 
-<u>GOAL</u>
 Automate EBS snapshots using AWS Lambda and Python (Boto3) to ensure data recovery via resource tagging.
 
 <u>TECH STACK</u>
