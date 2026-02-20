@@ -21,9 +21,9 @@ Secure: Operates via least-privilege IAM permissions.
 
 <u>WORKFLOW</u>
 
-Provision: Launched Instance i-00850dc6016df70cf with required tags.
+Provision: Launched Instance i-00850dc6016df70cf with tags.
 
-Authorize: Created IAM Policy for EC2 Snapshot and CloudWatch access.
+Authorize: Created IAM Policy for EC2 Snapshot and CloudWatch.
 
 Execute: Deployed Python script to Lambda to trigger backups.
 
@@ -33,4 +33,4 @@ Verify: Confirmed success via CloudWatch logs and EC2 Console.
 
 Instance ID: i-00850dc6016df70cf
 
-Result: SUCCESS (Verified)
+Result: SUCCESS
